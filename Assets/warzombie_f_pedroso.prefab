@@ -6272,6 +6272,7 @@ MonoBehaviour:
   coinActive: {fileID: 7872186881406269693, guid: 794657691c874f5479c6ea02fde9371a, type: 3}
   coinObj: {fileID: 2136510898387850316, guid: 794657691c874f5479c6ea02fde9371a, type: 3}
   coinSpawnPos: {fileID: 780610938}
+  phC: {fileID: 1684297287779834820, guid: 83528d106eccd4345940ac1ff56ffda7, type: 3}
 --- !u!1 &2928442179737423188
 GameObject:
   m_ObjectHideFlags: 0

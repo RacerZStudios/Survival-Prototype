@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] public float range = 5;
     [SerializeField] public Animator animator;
     [SerializeField] public EnemyController[] controllers;
+    public bool isDead; 
 
     private void Start()
     {
@@ -38,6 +39,11 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        if (gameObject == null)
+        {
+            isDead = true; 
+            return; 
+        }
         targetA = transform.position;
         targetB = player.transform.position;
 

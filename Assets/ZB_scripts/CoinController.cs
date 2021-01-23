@@ -8,7 +8,7 @@ public class CoinController : MonoBehaviour
     [SerializeField] private Collider coinCollider;
     [SerializeField] private GameObject player;
     [SerializeField] private AudioSource source;
-    [SerializeField] private AudioClip clip; 
+    [SerializeField] private AudioClip clip;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class CoinController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(PlayCoinAudio()); 
+            StartCoroutine(PlayCoinAudio());
         }
     }
 
