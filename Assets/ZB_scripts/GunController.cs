@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal; 
 using UnityEngine;
 
 public class GunController : MonoBehaviour
@@ -14,7 +16,9 @@ public class GunController : MonoBehaviour
     [SerializeField] public GameObject mainCamObj = null;
     [SerializeField] public Vector3 cameraOffset;
 
-    [SerializeField] private AudioSource source; 
+    [SerializeField] private AudioSource source;
+    [SerializeField] public CheckForZooming zoom;
+    [SerializeField] public ZoomEffect zoomed; 
  
     private void Start()
     {
@@ -48,11 +52,13 @@ public class GunController : MonoBehaviour
 
         if(Input.GetMouseButton(1))
         {
+            zoom.Zooming();
             cameraZoom.SetActive(true);
             mainCamObj.SetActive(false); 
         }
         else if(!Input.GetMouseButtonUp(1))
         {
+            zoom.NotZooming(); 
             mainCamObj.SetActive(true);
             cameraZoom.SetActive(false);
         }
@@ -63,7 +69,6 @@ public class GunController : MonoBehaviour
         fire = true; 
         if(fire == true)
         {
-            // audio play 
             source.Play(); 
             GameObject prefabPos = Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation); 
         }
