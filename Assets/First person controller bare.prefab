@@ -117,7 +117,6 @@ GameObject:
   - component: {fileID: 4236025858162396}
   - component: {fileID: 20552819534951614}
   - component: {fileID: 124780127127105942}
-  - component: {fileID: 81227977300868874}
   - component: {fileID: 114622389286356438}
   - component: {fileID: 690670290}
   - component: {fileID: 1446844824}
@@ -189,14 +188,6 @@ Camera:
   m_StereoSeparation: 0.022
 --- !u!124 &124780127127105942
 Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410248866075276}
-  m_Enabled: 1
---- !u!81 &81227977300868874
-AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -373,6 +364,7 @@ GameObject:
   - component: {fileID: 54461141426659490}
   - component: {fileID: 114752365842419232}
   - component: {fileID: 1684297287779834820}
+  - component: {fileID: 253076415152397746}
   m_Layer: 0
   m_Name: First person controller bare
   m_TagString: Player
@@ -459,6 +451,107 @@ MonoBehaviour:
   killedZombie: 0
   hC: {fileID: 363043954, guid: 07cf64780a07b5f429f5cce24ed38a52, type: 3}
   deadPanel: {fileID: 4378483434497425889, guid: aabf7e19bce3ab24f9dd15b37e3d1055, type: 3}
+  source: {fileID: 253076415152397746}
+  clip: {fileID: 8300000, guid: ba6e85522345cdd448e443d5255c8427, type: 3}
+  sourceMusic: {fileID: 776659418690294360, guid: bf07ae0bf684dfd4ab8c730be21c5e67, type: 3}
+  dead: {fileID: 530505039399640432, guid: aabf7e19bce3ab24f9dd15b37e3d1055, type: 3}
+  findA: {fileID: 5332955569621361311, guid: 4704ea4eef13cf74ebf55687d869854f, type: 3}
+--- !u!82 &253076415152397746
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779716706418230}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &389140638465636046
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,12 +856,6 @@ MonoBehaviour:
   cameraZoom: {fileID: 720207024}
   mainCamObj: {fileID: 2009837411058780698, guid: cc627b570db31f94da6bfbcacf384407, type: 3}
   cameraOffset: {x: 0, y: 0, z: 0}
-  smoothing: 0.5
-  lookAtGun: 0
-  rotateAroundGun: 1
-  rotationSpeed: 5
-  mPrevPos: {x: 0, y: 0, z: 0}
-  mPosDelta: {x: 0, y: 0, z: 0}
   source: {fileID: 1419068249}
 --- !u!1 &1750729587275633654
 GameObject:

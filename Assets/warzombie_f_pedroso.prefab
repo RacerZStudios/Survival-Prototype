@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 807705683}
   - component: {fileID: 807705682}
   - component: {fileID: 807705681}
+  - component: {fileID: 634540760004375288}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -222,6 +223,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &634540760004375288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807705679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e348d0eadeb64dac8cb07cbd33613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 363043956}
+  clip: {fileID: 8300000, guid: e2d36717e3ef33443bec3c5e67dac974, type: 3}
+  player: {fileID: 1779716706418230, guid: 83528d106eccd4345940ac1ff56ffda7, type: 3}
 --- !u!1 &1094083925
 GameObject:
   m_ObjectHideFlags: 0
@@ -6273,6 +6289,7 @@ MonoBehaviour:
   coinObj: {fileID: 2136510898387850316, guid: 794657691c874f5479c6ea02fde9371a, type: 3}
   coinSpawnPos: {fileID: 780610938}
   phC: {fileID: 1684297287779834820, guid: 83528d106eccd4345940ac1ff56ffda7, type: 3}
+  isKilled: 0
 --- !u!1 &2928442179737423188
 GameObject:
   m_ObjectHideFlags: 0
@@ -6458,11 +6475,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3132911368158372263}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e2d36717e3ef33443bec3c5e67dac974, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6567,6 +6584,9 @@ MonoBehaviour:
   animator: {fileID: 2862951925355121953}
   controllers:
   - {fileID: 363043954}
+  source: {fileID: 363043956}
+  clip: {fileID: 8300000, guid: 4f155160427767c42a02e6a9cb586603, type: 3}
+  isDead: 0
 --- !u!1 &3231429722628652437
 GameObject:
   m_ObjectHideFlags: 0

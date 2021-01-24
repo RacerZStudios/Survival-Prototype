@@ -11,10 +11,34 @@ public class PlayerHealthController : MonoBehaviour
     public int timeChunk1 = 1;
     public bool killedZombie;
     [SerializeField] public EnemyController hC;
-    [SerializeField] public GameObject deadPanel; 
+    [SerializeField] public GameObject deadPanel;
+    [SerializeField] public AudioSource source;
+    [SerializeField] public AudioClip clip;
+    [SerializeField] public AudioSource sourceMusic;
+    [SerializeField] public CheckForDead dead;
+    [SerializeField] public GameObject findA; 
+
+    private void Start()
+    {
+        if(!sourceMusic.isPlaying)
+        {
+            sourceMusic.gameObject.SetActive(true);
+        }
+
+        health.value = 1; 
+    }
 
     private void Update()
     {
+        if(findA == null)
+        {
+            return; 
+        }
+        else
+        {
+            findA = GameObject.Find("Find_Audio(Clone)"); 
+        }
+
         if(hC == null)
         {
             return; 
@@ -30,13 +54,27 @@ public class PlayerHealthController : MonoBehaviour
         }
         else
         {
-            health.value -= 0.0001f; 
+            health.value -= 0.0001f;
         }
 
         if(health.value <= 0)
         {
-            Instantiate(deadPanel, deadPanel.transform.position, deadPanel.transform.rotation); 
+            dead.deadAudio = true;
+            if (dead.deadAudio == true)
+            {
+                sourceMusic = FindObjectOfType<AudioSource>(); 
+                sourceMusic.gameObject.GetComponent<AudioSource>().enabled = false;
+            }
+
+            Death(); 
+            Instantiate(deadPanel, deadPanel.transform.position, deadPanel.transform.rotation);
+            findA.gameObject.SetActive(false); 
             gameObject.SetActive(false); 
         }
+    }
+
+    public bool Death()
+    {
+        return true; 
     }
 }

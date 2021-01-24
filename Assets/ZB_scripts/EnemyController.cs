@@ -10,6 +10,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] public float range = 5;
     [SerializeField] public Animator animator;
     [SerializeField] public EnemyController[] controllers;
+    [SerializeField] public AudioSource source;
+    [SerializeField] public AudioClip clip; 
+
     public bool isDead; 
 
     private void Start()
@@ -44,6 +47,7 @@ public class EnemyController : MonoBehaviour
             isDead = true; 
             return; 
         }
+
         targetA = transform.position;
         targetB = player.transform.position;
 
