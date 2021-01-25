@@ -6288,10 +6288,9 @@ MonoBehaviour:
   coinActive: {fileID: 7872186881406269693, guid: 794657691c874f5479c6ea02fde9371a, type: 3}
   coinObj:
   - {fileID: 2136510898387850316, guid: 794657691c874f5479c6ea02fde9371a, type: 3}
-  - {fileID: 8623214792162879411, guid: fac24b2bbb1efa44687c084e8e0383a8, type: 3}
-  - {fileID: 4078682077401508429, guid: fd13a88441ba63d4884feb26c05146f2, type: 3}
   - {fileID: 3709650196168333621, guid: 478adf48aeaeb01469e04fa06b40af9c, type: 3}
   - {fileID: 5889408295175455488, guid: f00165f31597d224db85bd16aa7288aa, type: 3}
+  - {fileID: 4078682077401508429, guid: fd13a88441ba63d4884feb26c05146f2, type: 3}
   coinSpawnPos: {fileID: 780610938}
   phC: {fileID: 1684297287779834820, guid: 83528d106eccd4345940ac1ff56ffda7, type: 3}
   isKilled: 0

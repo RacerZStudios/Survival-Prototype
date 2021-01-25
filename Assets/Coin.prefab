@@ -133,6 +133,7 @@ MonoBehaviour:
   source: {fileID: 5944888069616914777}
   clip: {fileID: 8300000, guid: f8cd8b17a6700f54e81af542119cf6df, type: 3}
   zombieTExt: {fileID: -1250204431885552373, guid: 2c034988025a53d49a182100a169e74d, type: 3}
+  prizeObj: {fileID: 2066064432335517850, guid: 622665468b01e314a973250f0842af60, type: 3}
   CointCount: 0
   collectedCoin: 0
 --- !u!82 &5944888069616914777

@@ -11,6 +11,7 @@ public class CoinController : MonoBehaviour
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip clip;
     [SerializeField] private ZombieText_Controller zombieTExt;
+    [SerializeField] private GameObject prizeObj; 
     public int CointCount = 0;
     public bool collectedCoin; 
 
@@ -31,6 +32,14 @@ public class CoinController : MonoBehaviour
             Debug.Log(CointCount);
             Debug.Log(zombieTExt.text); 
             StartCoroutine(PlayCoinAudio());
+
+            if(collectedCoin == true)
+            {
+                // Debug.Log("Eliminated All Zombies!" + CointCount);
+                Debug.Log("Collected The Prize" + "You may continue");
+                Instantiate(prizeObj);
+                return; 
+            }
         }
     }
 
@@ -38,7 +47,7 @@ public class CoinController : MonoBehaviour
     {
         if(CointCount >= 5 || CointCount != 0)
         {
-            Debug.Log("Eliminated All Zombies!" + CointCount);
+            collectedCoin = true; 
             return; 
         }
     }
