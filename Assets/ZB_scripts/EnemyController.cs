@@ -51,7 +51,15 @@ public class EnemyController : MonoBehaviour
         }
 
         targetA = transform.position;
-        targetB = player.transform.position;
+        if(player != null)
+        {
+            targetB = player.transform.position;
+        }
+
+        if(player == null)
+        {
+            return; 
+        }
 
         if (Vector3.Distance(targetB, targetA) <= range)
         {

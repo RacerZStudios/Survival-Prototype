@@ -9,7 +9,7 @@ public class PlayerHealthController : MonoBehaviour
     public float time = 100;
     public int maxTime = 100;
     public int timeChunk1 = 1;
-    public bool killedZombie = false;
+    [SerializeField] public bool killedZombie = false;
     [SerializeField] public EnemyController hC;
     [SerializeField] public GameObject deadPanel;
     [SerializeField] public AudioSource source;
@@ -54,6 +54,9 @@ public class PlayerHealthController : MonoBehaviour
         if(killedZombie == true || hC.isDead == true)
         {
             health.value += 0.5f;
+            // untick killedZombie when true 
+            killedZombie = false;
+            hC.isDead = false; 
         }
         else
         {
