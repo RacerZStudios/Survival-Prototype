@@ -9,14 +9,19 @@ public class PlayerHealthController : MonoBehaviour
     public float time = 100;
     public int maxTime = 100;
     public int timeChunk1 = 1;
-    public bool killedZombie;
+    public bool killedZombie = false;
     [SerializeField] public EnemyController hC;
     [SerializeField] public GameObject deadPanel;
     [SerializeField] public AudioSource source;
     [SerializeField] public AudioClip clip;
     [SerializeField] public AudioSource sourceMusic;
     [SerializeField] public CheckForDead dead;
-    [SerializeField] public GameObject findA; 
+    [SerializeField] public GameObject findA;
+
+    private void Awake()
+    {
+        killedZombie = false; 
+    }
 
     private void Start()
     {
@@ -39,7 +44,7 @@ public class PlayerHealthController : MonoBehaviour
             findA = GameObject.Find("Find_Audio(Clone)"); 
         }
 
-        if(hC == null)
+        if (hC == null)
         {
             return; 
         }
@@ -49,15 +54,13 @@ public class PlayerHealthController : MonoBehaviour
         if(killedZombie == true || hC.isDead == true)
         {
             health.value += 0.5f;
-            Debug.Log(health);
-            Debug.Log(killedZombie); 
         }
         else
         {
             health.value -= 0.0001f;
         }
 
-        if(health.value <= 0)
+        if (health.value <= 0)
         {
             dead.deadAudio = true;
             if (dead.deadAudio == true)

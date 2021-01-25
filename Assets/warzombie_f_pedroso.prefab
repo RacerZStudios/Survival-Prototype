@@ -6286,10 +6286,19 @@ MonoBehaviour:
   projectile: {fileID: 7684094553519862259, guid: 6e0677b6cb0e20a4d894e033c0965ab3, type: 3}
   targetObj: {fileID: 3132911368158372263}
   coinActive: {fileID: 7872186881406269693, guid: 794657691c874f5479c6ea02fde9371a, type: 3}
-  coinObj: {fileID: 2136510898387850316, guid: 794657691c874f5479c6ea02fde9371a, type: 3}
+  coinObj:
+  - {fileID: 2136510898387850316, guid: 794657691c874f5479c6ea02fde9371a, type: 3}
+  - {fileID: 8623214792162879411, guid: fac24b2bbb1efa44687c084e8e0383a8, type: 3}
+  - {fileID: 4078682077401508429, guid: fd13a88441ba63d4884feb26c05146f2, type: 3}
+  - {fileID: 3709650196168333621, guid: 478adf48aeaeb01469e04fa06b40af9c, type: 3}
+  - {fileID: 5889408295175455488, guid: f00165f31597d224db85bd16aa7288aa, type: 3}
   coinSpawnPos: {fileID: 780610938}
   phC: {fileID: 1684297287779834820, guid: 83528d106eccd4345940ac1ff56ffda7, type: 3}
   isKilled: 0
+  zombiesAlive: 5
+  zombieTextController: {fileID: -1250204431885552373, guid: 2c034988025a53d49a182100a169e74d, type: 3}
+  healthControllers:
+  - {fileID: 708940160}
 --- !u!1 &2928442179737423188
 GameObject:
   m_ObjectHideFlags: 0

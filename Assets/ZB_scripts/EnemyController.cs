@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -11,7 +12,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] public Animator animator;
     [SerializeField] public EnemyController[] controllers;
     [SerializeField] public AudioSource source;
-    [SerializeField] public AudioClip clip; 
+    [SerializeField] public AudioClip clip;
 
     public bool isDead; 
 
@@ -42,10 +43,11 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        isDead = false;
         if (gameObject == null)
         {
-            isDead = true; 
-            return; 
+            isDead = true;
+            Debug.Log(isDead); 
         }
 
         targetA = transform.position;
